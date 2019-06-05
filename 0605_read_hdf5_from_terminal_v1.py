@@ -47,7 +47,8 @@ else:
     #print(data.shape)
     #print(data)
 
-    print(df)
+    with pandas.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+        print(df)
 
 
 
