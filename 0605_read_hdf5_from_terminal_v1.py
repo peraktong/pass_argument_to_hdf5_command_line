@@ -31,6 +31,28 @@ else:
     name_of_dataset_array = np.array(name_of_dataset_array)
 
     hf = h5py.File(save_name, "r")
+
+    
+
+    for i in range(0, N_length):
+        if i==0:
+
+            data = np.array(hf[name_of_dataset_array[i]])
+            data_fusion=data
+            N = len(data)
+        else:
+            data = np.array(hf[name_of_dataset_array[i]])
+
+            data_fusion = np.c_[data_fusion, data]
+
+
+
+
+
+
+    """
+    
+    
     df = pandas.DataFrame()
 
 
@@ -38,16 +60,21 @@ else:
         data = np.array(hf[name_of_dataset_array[i]])
         df[name_of_dataset_array[i]]=data
 
-    hf.close()
+
+    
+    """
+    str_target = '{} '*N_length
+
+    for i in range(0,N):
+
+        #print("".join(str(x) for x in data_fusion[i,:]))
+        print(str_target.format(*data_fusion[i,:]))
+    # print(N)
 
 
-    # output:
-    #print("name_of_dataset \n %s" % name_of_dataset)
-    #print("Shape of data \n ")
-    #print(data.shape)
-    #print(data)
 
-    print(df)
+
+
 
 
 
