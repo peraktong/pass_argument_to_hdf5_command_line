@@ -36,5 +36,5 @@ print(data,name_of_dataset,save_name)
 
 hf.close()
 
-# remove the same
+# remove the saved file
 os.system("rm %s"%save_name)
