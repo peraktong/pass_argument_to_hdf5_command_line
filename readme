@@ -1,3 +1,6 @@
 usage:
+### save hdf5:
 python 0411_read_hdf5_from_terminal.py data(1D) name_of_dataset save_name
 eg: python 0411_read_hdf5_from_terminal.py [1,2,3] dataset trial.h5
+### read hdf5:
+python 0605_read_hdf5_from_terminal_v1.py hdf5_name name_of_dataset 
